@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "Running custom cleanup during build stage..."
+
+# Run the cleanup commands
+bash heroku-clean.sh
+
+echo "Cleanup completed during build stage."
