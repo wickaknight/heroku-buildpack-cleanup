@@ -4,7 +4,7 @@ echo "Starting post-build cleanup..."
 
 # Clear unnecessary libraries
 echo "Clearing Python packages not used in the project..."
-pip uninstall -y Cython Jinja2 Markdown MarkupSafe PyYAML Pygments SudachiDict-core SudachiPy matplotlib scikit-learn numpy umap-learn babel langcodes dateparser
+pip uninstall -y SudachiDict-core matplotlib scikit-learn numpy
 
 # Remove caches and temporary files
 echo "Removing temporary files and caches..."
@@ -15,3 +15,5 @@ find . -name "*.pyo" -exec rm -f {} \;
 
 # Remove other unneeded directories (if present)
 rm -rf tests/ docs/ examples/
+
+echo "Post-build cleanup complete."
