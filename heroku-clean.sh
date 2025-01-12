@@ -4,7 +4,7 @@ echo "Starting post-build cleanup..."
 
 # Clear unnecessary libraries
 echo "Clearing Python packages not used in the project..."
-pip uninstall -y SudachiDict-core matplotlib numba numpy scikit_learn scipy spacy sympy babel llvmlite blis
+pip uninstall -y SudachiDict-core matplotlib numba scikit_learn scipy spacy sympy babel llvmlite blis
 
 # Remove caches and temporary files
 echo "Removing temporary files and caches..."
