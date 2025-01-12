@@ -4,8 +4,7 @@ echo "Starting post-build cleanup..."
 
 # Clear unnecessary libraries
 echo "Clearing Python packages not used in the project..."
-pip uninstall -y Cython Jinja2 Markdown MarkupSafe PyYAML Pygments SudachiDict-core SudachiPy \
-Unidecode Werkzeug matplotlib scikit-learn umap-learn babel langcodes dateparser
+pip uninstall -y Cython Jinja2 Markdown MarkupSafe PyYAML Pygments SudachiDict-core SudachiPy matplotlib scikit-learn numpy umap-learn babel langcodes dateparser
 
 # Remove caches and temporary files
 echo "Removing temporary files and caches..."
