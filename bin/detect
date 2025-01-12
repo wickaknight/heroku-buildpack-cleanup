@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "heroku-buildpack-cleanup"
+exit 0
