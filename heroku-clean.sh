@@ -2,9 +2,15 @@
 
 echo "Starting post-build cleanup..."
 
-# Clear unnecessary libraries
+# Clear unnecessary Python packages
 echo "Clearing Python packages not used in the project..."
-pip uninstall -y 
+pip install pip-autoremove
+pip-autoremove <package_name> -y
+
+# Remove unused imports and variables from Python files
+echo "Removing unused imports and variables..."
+pip install autoflake
+autoflake --in-place --remove-all-unused-imports --remove-unused-variables --recursive .
 
 # Remove caches and temporary files
 echo "Removing temporary files and caches..."
